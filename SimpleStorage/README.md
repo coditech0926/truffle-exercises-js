@@ -1,4 +1,4 @@
-This will guide you through the basic steps practicing with the Truffle framework
+This will guide you through the basic steps practicing with the Truffle framework.
 
 # Initialization
 
