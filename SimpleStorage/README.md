@@ -79,7 +79,7 @@ truffle(develop)>
 ```
 The first account will be used as the default to make transactions in the console ```truffle(develop)>```, including our contract deployment. 
 
-Before deployment, let's check that our default transaction account was initially given 100 ether, i.e.  $$10^{20}$$ Wei:
+Before deployment, let's check that our default transaction account was initially given 100 ether, i.e.  10^20 Wei:
 
 ```
 truffle(develop)> addr = web3.eth.accounts[0];
@@ -87,5 +87,32 @@ truffle(develop)> addr = web3.eth.accounts[0];
 truffle(develop)> web3.eth.getBalance(addr).toExponential();
 '1e+20'
 ```
+Now we deploy the contractrs:
+
+```
+truffle(develop)> migrate
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/Store.sol...
+Writing artifacts to ./build/contracts
+
+Using network 'develop'.
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  ... 0xecb33cd5d5193c6f021128c64de4ab9fc9fa7920a032bd67462cc27ddbac9e0b
+  Migrations: 0x8cdaf0cd259887258bc13a92c0a6da92698644c0
+Saving successful migration to network...
+  ... 0xd7bc86d31bee32fa3988f1c1eabce403a1b5d570340a3a9cdba53a472ee8c956
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+  Deploying SimpleStorage...
+  ... 0x0498f3ac563992c9414a414bd64f10353b872a42615669fa744f6b9d3f29284c
+  SimpleStorage: 0x345ca3e014aaf5dca488057592ee47305d9b3e10
+Saving successful migration to network...
+  ... 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
+Saving artifacts...
+truffle(develop)> 
+```
+As you can see, four transactions were made.
 
 # Interact with your contract
