@@ -116,12 +116,15 @@ Saving successful migration to network...
 Saving artifacts...
 truffle(develop)>
 ```
-As you can see, four transactions were made. Let's check that our default transaction account has paid for these transactions:
+As you can see, four transactions were made, of which the third one is the actual deployment of the contract ```SimpleStorage```. The address for our contract ```SimpleStorage``` is ```0x345ca3e014aaf5dca488057592ee47305d9b3e10```.
+
+Let's check that our default transaction account has paid for these transactions:
 
 ```
 truffle(develop)> web3.eth.getBalance(addr).toExponential();
 '9.99541309e+19'
 ```
+
 Also, we can check that the ```nonce``` of our default account has been raised accordingly:
 
 ```
