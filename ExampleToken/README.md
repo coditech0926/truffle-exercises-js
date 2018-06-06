@@ -25,4 +25,27 @@ ExampleToken/
 
 # Create the token contract
 
-Copy  the ```contracts/``` directory.
+## A simple token contract
+
+Copy [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/contracts/ExTokenSimple.sol) simple token contract file into the ```contracts/``` directory. Add to it more variables and functions if you like.
+
+## A standard ERC20 token contract
+
+Alternatively, you can copy [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/contracts/ExTokenStandard.sol) file into the ```contracts/``` directory. This contract is a standard ERC20 token, about which you can learn more at this [link](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md). 
+
+Only the contract we just copied is not complete by itself, since it uses the OpenZeppelin library. To get OpenZeppelin library installed, in the working directory ```ExampleToken/``` we do the following:
+
+```
+$ npm init -y
+$ npm install openzeppelin-solidity
+```
+If everything so far goes well, you will find the OpenZeppelin library in the directory ```ExampleToken/node_modules/```. All the library's contracts is contained in the `ExampleToken/node_modules/openzeppelin-solidity/contracts` folder. You can learn more about the OpenZeppelin library [here](https://github.com/OpenZeppelin/openzeppelin-solidity).
+
+
+# 
+
+
+
+
+
+
