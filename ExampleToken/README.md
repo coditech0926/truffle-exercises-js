@@ -106,9 +106,10 @@ Now I'll assume you have already get an account with enough balance on Rinkeby t
 
 Never use an account on the mainnet for this project!
 
+
 ## Configure network for Truffle
 
-
+Use this configuration file.
 
 
 
