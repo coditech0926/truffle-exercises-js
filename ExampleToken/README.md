@@ -111,6 +111,9 @@ Never use an account on the mainnet for this project!
 
 Use [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/truffle.js) configuration file to replace ```truffle.js``` in your working directory ```ExampleToken/```.
 
+Open the copied file, and replace my account with yours in the configuration of ```rinkeby``` network.
+
+## 
 
 
 
