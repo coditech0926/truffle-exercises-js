@@ -135,8 +135,37 @@ truffle(develop)> web3.eth.getTransactionCount(addr);
 ```
 Check out [this](https://github.com/ethereum/wiki/wiki/JavaScript-API) page to learn more about usage of various available JavaScript APIs. 
 
-# Interact with your contract
+# Interact with the contract
 
+Our contract has two functions ```set(uint)``` and ```get()```. We check that the variable ```myVariable``` is initially set to zero:
 
+```
+truffle(develop)> SimpleStorage.deployed().then(function(instance) { return instance.get()}).then(function(value){return value.toNumber()});
+0
+```
+Set ```myVariable``` to the value 5:
 
+```
+truffle(develop)> SimpleStorage.deployed().then(function(instance) { return instance.set(5)});
+{ tx: '0xa7443bc291fa9072cf3e699be9a9820aaedd2430dbca4d95ebf4882eb65d7fc6',
+  receipt: 
+   { transactionHash: '0xa7443bc291fa9072cf3e699be9a9820aaedd2430dbca4d95ebf4882eb65d7fc6',
+     transactionIndex: 0,
+     blockHash: '0x181c7d377553cd39c0af69416bbbf8b44eafa59077c84a5d5092fdc55f5dc096',
+     blockNumber: 5,
+     gasUsed: 41669,
+     cumulativeGasUsed: 41669,
+     contractAddress: null,
+     logs: [],
+     status: '0x01',
+     logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' },
+  logs: [] }
+truffle(develop)>
+```
+As you can see, the ```set(uint)``` method starts a transaction, since it writes data to the blockchain. Now we should see the value of ```myVariable``` has been set to 5:
+
+```
+truffle(develop)> SimpleStorage.deployed().then(function(instance) { return instance.get()}).then(function(value){return value.toNumber()});
+5
+```
 
