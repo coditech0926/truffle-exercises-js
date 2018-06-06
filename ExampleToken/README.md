@@ -23,4 +23,5 @@ ExampleToken/
 └── truffle.js
 ```
 
-# 
+# Create the token contract
+
