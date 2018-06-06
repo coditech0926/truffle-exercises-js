@@ -42,7 +42,15 @@ $ npm install openzeppelin-solidity
 If everything so far goes well, you will find the OpenZeppelin library in the directory ```ExampleToken/node_modules/```. All the library's contracts is contained in the `ExampleToken/node_modules/openzeppelin-solidity/contracts` folder. You can learn more about the OpenZeppelin library [here](https://github.com/OpenZeppelin/openzeppelin-solidity).
 
 
-# 
+# Compile the contracts
+
+In your working directory ```ExampleToken```,
+
+```
+$ truffle compile
+```
+
+
 
 
 
