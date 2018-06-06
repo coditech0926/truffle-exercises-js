@@ -28,9 +28,11 @@ After initialization, your working directory will filled with the following file
 
 # Create your contract
 
-In the ```contracts/``` directory, create your contract file "Store.sol", which you can find it [here](https://github.com/rszheng/truffle-exercises/blob/master/SimpleStorage/contracts/Store.sol).
+In the ```contracts/``` directory, create your contract file ```Store.sol```, which you can find [here](https://github.com/rszheng/truffle-exercises/blob/master/SimpleStorage/contracts/Store.sol).
 
 # Prepare for deploying
+
+In the ```migrations/``` directory, create a file named 
 
 # Deploy your contract
 
