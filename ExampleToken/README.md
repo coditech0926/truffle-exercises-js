@@ -25,3 +25,4 @@ ExampleToken/
 
 # Create the token contract
 
+Copy  the ```contracts/``` directory.
