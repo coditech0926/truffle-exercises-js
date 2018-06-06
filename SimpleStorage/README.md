@@ -79,7 +79,7 @@ truffle(develop)>
 ```
 The first account will be used as the default to make transactions in the console ```truffle(develop)>```, including our contract deployment. 
 
-Before deployment, let's check that our default transaction account was initially given 100 ether, i.e. $10^20$ Wei:
+Before deployment, let's check that our default transaction account was initially given 100 ether, i.e.  $$10^{20}$$ Wei:
 
 ```
 truffle(develop)> addr = web3.eth.accounts[0];
