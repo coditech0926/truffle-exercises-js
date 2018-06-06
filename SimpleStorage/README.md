@@ -30,6 +30,13 @@ After initialization, your working directory will filled with the following file
 
 In the ```contracts/``` directory, create your contract file ```Store.sol```, which you can find [here](https://github.com/rszheng/truffle-exercises/blob/master/SimpleStorage/contracts/Store.sol).
 
+# Compile your contract
+
+```
+$ truffle compile
+```
+When successfully compiled, a ```build/``` directory will be found in your working directory ```SimpleStorage/```. ```cd``` into ```build/contracts/```, the file ```SimpleStorage.json``` contains all kinds of compiled objects of ```Store.sol```, such as ABI and bytecode. 
+
 # Prepare for deploying
 
 In the ```migrations/``` directory, create a file ```2_deploy_contracts.js```, which you can find [here](https://github.com/rszheng/truffle-exercises/blob/master/SimpleStorage/migrations/2_deploy_contracts.js).
@@ -91,10 +98,6 @@ Now we deploy the contractrs:
 
 ```
 truffle(develop)> migrate
-Compiling ./contracts/Migrations.sol...
-Compiling ./contracts/Store.sol...
-Writing artifacts to ./build/contracts
-
 Using network 'develop'.
 
 Running migration: 1_initial_migration.js
@@ -111,8 +114,20 @@ Running migration: 2_deploy_contracts.js
 Saving successful migration to network...
   ... 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
 Saving artifacts...
+truffle(develop)>
 truffle(develop)> 
 ```
-As you can see, four transactions were made.
+As you can see, four transactions were made. Let's check that our default transaction account has paid for these transactions:
+
+```
+truffle(develop)> web3.eth.getBalance(addr).toExponential();
+'9.99541309e+19'
+```
+Also, we can check that the ```nonce``` of our default account has been raised accordingly:
+
+```
+truffle(develop)> web3.eth.getTransactionCount(addr);
+4
+```
 
 # Interact with your contract
