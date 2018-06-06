@@ -115,7 +115,10 @@ Open the copied file, and replace my account with yours in the configuration of 
 
 ## Create a migration file for deployment
 
-Copy this into ```ExampleToken/migrations/```.
+Copy [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/migrations/2_deploy_contracts.js) file into ```ExampleToken/migrations/```.
+
+# Deploy the contracts
+
 
 
 
