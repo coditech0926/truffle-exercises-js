@@ -32,8 +32,16 @@ In the ```contracts/``` directory, create your contract file ```Store.sol```, wh
 
 # Prepare for deploying
 
-In the ```migrations/``` directory, create a file named 
+In the ```migrations/``` directory, create a file ```2_deploy_contracts.js```, which you can find [here](https://github.com/rszheng/truffle-exercises/blob/master/SimpleStorage/migrations/2_deploy_contracts.js).
 
 # Deploy your contract
+
+In this project, we will deploy the contract to a private blockchain. For developing convenience, Truffle provides a built-in blockchain, which can be started by command:
+
+```
+$ truffle develop
+```
+As the development blockchain gets started, you will be given ten accounts:
+
 
 # Interact with your contract
