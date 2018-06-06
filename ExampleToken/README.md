@@ -109,7 +109,9 @@ Never use an account on the mainnet for this project!
 
 ## Configure network for Truffle
 
-Use this configuration file.
+Use [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/truffle.js) configuration file to replace ```truffle.js``` in your working directory ```ExampleToken/```.
+
+
 
 
 
