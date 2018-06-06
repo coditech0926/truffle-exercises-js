@@ -1,5 +1,5 @@
-var EToken = artifacts.require("EToken");
+var ExToken = artifacts.require("ExToken");
 
 module.exports = function(deployer) {
-    deployer.deploy(EToken);
+    deployer.deploy(ExToken);
 };
