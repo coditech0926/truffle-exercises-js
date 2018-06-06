@@ -30,6 +30,8 @@ After initialization, your working directory will filled with the following file
 
 In the ```contracts/``` directory, create your contract file ```Store.sol```, which you can find [here](https://github.com/rszheng/truffle-exercises/blob/master/SimpleStorage/contracts/Store.sol).
 
+The sample contract ```Store.sol``` has only one variable ```myVariable```, and two functions: ```set(uint)``` and ```get()```. The function ```set(uint)``` takes in a parameter and sets it to the value of ```myVariable```. The function ```get()``` simply returns the current value of ```myVariable```. You can add more variables and functions to this contract.
+
 # Compile your contract
 
 ```
