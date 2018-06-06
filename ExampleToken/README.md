@@ -139,7 +139,26 @@ If not, it means your client is still not synchronized. Just wait for it.
 After fully synchronized, you can finally deploy your contract:
 
 ```
+$ truffle migrate --network rinkeby
+Using network 'rinkeby'.
 
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  ... 0x8bf221719772ede97579e8ca24de16ec827caead1be146cd7aa01b1be0081f82
+  Migrations: 0xe273c3a65caf8043519c535dd2e7cef4fac1852a
+Saving successful migration to network...
+  ... 0x56d30bfb1debdac4c6c39011b65d513dbb8db9717c495fdd4fd60ea6bdfa1e13
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+  Deploying ExToken...
+  ... 0x5fb0d167ed76f5d3edc5d96c4bdd4bfafcebdbaa32c2f255a56c468ed3e27ed6
+  ExToken: 0xabd2fdf1e587990c27f0772ed2868ac3831d3d66
+Saving successful migration to network...
+  ... 0xf35e2b7bb10850661cdb32e0dda1764c876167ee2a21f5f8daa72bc25033ac20
+Saving artifacts...
+```
+
+Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explorer).
 
 
 
