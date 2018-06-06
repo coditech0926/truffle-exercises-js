@@ -1,5 +1,6 @@
 This will guide you through the basic steps practicing with the Truffle framework.
 
+
 # Initialization
 
 You need to start with an empty working directory: 
