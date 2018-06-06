@@ -32,7 +32,7 @@ In the ```contracts/``` directory, create your contract file ```Store.sol```, wh
 
 The sample contract ```Store.sol``` has only one variable ```myVariable```, and two functions: ```set(uint)``` and ```get()```. The function ```set(uint)``` takes in a parameter and sets it to the value of ```myVariable```. The function ```get()``` simply returns the current value of ```myVariable```. You can add more variables and functions to this contract.
 
-# Compile your contract
+# Compile the contracts
 
 ```
 $ truffle compile
@@ -43,7 +43,7 @@ When successfully compiled, a ```build/``` directory will be found in your worki
 
 In the ```migrations/``` directory, create a file ```2_deploy_contracts.js```, which you can find [here](https://github.com/rszheng/truffle-exercises/blob/master/SimpleStorage/migrations/2_deploy_contracts.js).
 
-# Deploy your contract
+# Deploy the contracts
 
 In this project, we will deploy the contract to a private blockchain. For developing convenience, Truffle provides a built-in blockchain, which can be started by command:
 
