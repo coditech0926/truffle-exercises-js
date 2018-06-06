@@ -113,7 +113,11 @@ Use [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken
 
 Open the copied file, and replace my account with yours in the configuration of ```rinkeby``` network.
 
-## 
+## Create a migration file for deployment
+
+Copy this into ```ExampleToken/migrations/```.
+
+
 
 
 
