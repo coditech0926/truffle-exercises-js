@@ -119,6 +119,26 @@ Copy [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToke
 
 # Deploy the contracts
 
+Now you need to close the synchronizing ```geth``` client (```CTRL + C```) and restart it with the following:
+
+```
+geth --rinkeby --light --rpc --rpcapi db,eth,net,web3,personal --unlock="0xd0d1baa48924550cd7c90fe8f959bbfade473fa4"
+```
+Remember to replace my account with yours. 
+
+You will be asked to provide the password for your account.
+
+As the client starts synchronizing again, in your console (another opened terminal), check that your account has indeed got enough balance.
+
+```
+> eth.getBalance(eth.accounts[0])
+21449009200000000000
+```
+If not, it means your client is still not synchronized. Just wait for it.
+
+After fully synchronized, you can finally deploy your contract:
+
+```
 
 
 
