@@ -98,10 +98,17 @@ You can use your already existent account, or just obtain a new one:
 ```
 > personal.newAccount("YOURPASSWORD")
 ```
-You will need your account address and password later on, so keep them somewhere or just leave this terminal open for now.
+You will need your account address and password later on, so keep them somewhere or just leave this terminal open for the moment.
+
+To get some ether for your account, go for this [faucet](https://www.rinkeby.io/#faucet) and follow the instructions.
+
+Now I'll assume you have already get an account with enough balance on Rinkeby testnet. I'll also assume you have the password for the account. 
+
+Never use an account on the mainnet for this project!
+
+## Configure network for Truffle
 
 
-Now I'll assume you have already get an account with enough balance on Rinkeby testnet. Never use an account on the mainnet for our project! I'll assume you also have the password for the account. To be clear, this password is not the private key of your account, but the one provided to generate the account on
 
 
 
