@@ -5,7 +5,7 @@ contract ExToken {
     mapping (address => uint256) public balanceOf;
     
     string public constant name = 'Example Token';
-    string public constant symbol = 'ExT'
+    string public constant symbol = 'ExT';
     uint8 public constant decimals = 2;
     uint constant totalSupply = 2100000000;
 
