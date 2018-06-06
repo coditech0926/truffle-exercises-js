@@ -115,7 +115,6 @@ Saving successful migration to network...
   ... 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
 Saving artifacts...
 truffle(develop)>
-truffle(develop)> 
 ```
 As you can see, four transactions were made. Let's check that our default transaction account has paid for these transactions:
 
@@ -129,5 +128,10 @@ Also, we can check that the ```nonce``` of our default account has been raised a
 truffle(develop)> web3.eth.getTransactionCount(addr);
 4
 ```
+Check out [this](https://github.com/ethereum/wiki/wiki/JavaScript-API) page to learn more about usage of various available JavaScript APIs. 
 
 # Interact with your contract
+
+
+
+
