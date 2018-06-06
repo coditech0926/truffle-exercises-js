@@ -158,7 +158,15 @@ Saving successful migration to network...
 Saving artifacts...
 ```
 
-Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explorer).
+Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explorer). If you deployed an ERC20 token, the explorer will be able to provide you the basic information of your token, such as the token name, symbol, total supply, etc.
+
+# Interact with your contract
+
+Check that after deploying, you account has been given the total supply of your token:
+
+
+
+
 
 
 
