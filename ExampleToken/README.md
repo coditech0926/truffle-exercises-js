@@ -166,6 +166,35 @@ Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explore
 
 For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node.
 
+## Get the contract's ABI
+
+A contract's ABI, or Application Binary Interface, tells how applications will interact with the contract deployed on a blockchain. 
+
+In fact, the compiling of contract ```ExToken``` has already produced its ABI in the JSON file ```ExampleToken/build/contracts/ExToken.json```. To extract it from the file, we may use the ```jq``` tool, which you can find at this [link](https://stedolan.github.io/jq/download/). 
+
+```cd``` into ```ExampleToken/build/contracts/```, use the following command to get the ABI file of contract ```ExToken```:
+
+```
+$ echo $(cat ExToken.json | jq ".abi") > ExToken.abi
+```
+Alternatively, you can use the compiler ```solc``` to get the ABI. Suppose you are in the directory ```ExampleToken/```:
+
+- for ```ExTokenSimple.sol```
+
+```
+$ solc -o build/contract/ --abi contracts/ExTokenSimple.sol
+```
+- for ```ExTokenStandard.sol```
+
+```
+$ solc -o build/contract/ --allow-paths . --abi contracts/ExTokenStandard.sol
+```
+
+
+## 
+
+
+
 Check that after deploying, your account has been given the total supply of your token:
 
 
