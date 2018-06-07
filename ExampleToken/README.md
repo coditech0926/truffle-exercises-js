@@ -26,11 +26,11 @@ ExampleToken/
 
 # Create the token contract
 
-## A simple token contract
+### A simple token contract
 
 Copy [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/contracts/ExTokenSimple.sol) simple token contract file into the ```contracts/``` directory. Add to it more variables and functions if you like.
 
-## A standard ERC20 token contract
+### A standard ERC20 token contract
 
 Alternatively, you can copy [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/contracts/ExTokenStandard.sol) file into the ```contracts/``` directory. This contract is a standard ERC20 token, about which you can learn more at this [link](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md). 
 
@@ -55,7 +55,7 @@ $ truffle compile
 
 As we are going to deploy our token contract to the Rinkeby testnet, we need an account with enough balance on the Rinkeby testnet.  
 
-## Get an account with enough balance on Rinkeby testnet
+### Get an account with enough balance on Rinkeby testnet
 
 If you don't already have a Rinkeby account with enough balance, say 0.5 ether, we recommend you to follow [this](https://gist.github.com/cryptogoth/10a98e8078cfd69f7ca892ddbdcf26bc) tutorial, only you don't need to run a full node. Synchronizing a light node is much faster, and we do need to get synchronized if our account is newly generated (so that the account will be known to have enough balance to deploy our contracts). 
 
@@ -110,13 +110,13 @@ Now I'll assume you have already get an account with enough balance on Rinkeby t
 Never use an account on the mainnet for this project!
 
 
-## Configure network for Truffle
+### Configure network for Truffle
 
 Use [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/truffle.js) configuration file to replace ```truffle.js``` in your working directory ```ExampleToken/```.
 
 Open the copied file, and replace my account with yours in the configuration of ```rinkeby``` network.
 
-## Create a migration file for deployment
+### Create a migration file for deployment
 
 Copy [this](https://github.com/rszheng/truffle-exercises/blob/master/ExampleToken/migrations/2_deploy_contracts.js) file into ```ExampleToken/migrations/```.
 
@@ -166,7 +166,7 @@ Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explore
 # Interact with your contract
 
 For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node. 
-## Get the contract's ABI
+### Get the contract's ABI
 
 A contract's ABI, or Application Binary Interface, tells how applications will interact with the contract deployed on a blockchain. Learn more about contract ABI [here](https://solidity.readthedocs.io/en/develop/abi-spec.html).
 
@@ -199,7 +199,7 @@ $ solc -o build/contract/ --allow-paths . --abi contracts/ExTokenStandard.sol
 For ```ExTokenStandard.sol```, all contracts used (directly or indirectly) by ```ExToken``` have also been compiled with separate ABI files generated.
 
 
-## Creates a contract instance for ```ExToken```
+### Creates a contract instance for ```ExToken```
 
 In the ```geth``` console, do the following:
 
@@ -210,7 +210,7 @@ In the ```geth``` console, do the following:
 ```
 Remember to use the address of your deployed contract in the last commandline.
 
-## Get information from you contract
+### Get information from you contract
 
 Try the following:
 
@@ -226,7 +226,7 @@ Try the following:
 ```
 As the creator of the contract, you have been given the total supply of ```ExToken```.
 
-## Send transactions
+### Send transactions
 
 To send transactions to your contract, we need to specify the transaction sender. If not specified, your ```geth``` client will use a default account, which is initially undefined, and this will lead to execution failure. To define the default account, just give it a value:
 
