@@ -61,7 +61,7 @@ If you don't already have a Rinkeby account with enough balance, say 0.5 ether, 
 
 
 
-Here, I will assume you have already installed correctly the ```geth``` client and show most part of the rest.
+Here, I will assume you have already installed correctly the ```geth``` client and show most of the rest part.
 
 We first start the client in ```--light``` mode:
 
