@@ -1,5 +1,6 @@
 
-In this project, we will create an example token on the Rinkeby testnet.
+In this project, we will create an example token on the Rinkeby testnet. 
+When following instructions, always remember to replace my account/address with yours.
 
 # Initialization
 
@@ -126,7 +127,6 @@ Now you need to close the synchronizing ```geth``` client (```CTRL + C```) and r
 ```
 geth --rinkeby --light --rpc --rpcapi db,eth,net,web3,personal --unlock="0xd0d1baa48924550cd7c90fe8f959bbfade473fa4"
 ```
-Remember to replace my account with yours. 
 
 You will be asked to provide the password for your account.
 
@@ -159,6 +159,7 @@ Saving successful migration to network...
   ... 0xf35e2b7bb10850661cdb32e0dda1764c876167ee2a21f5f8daa72bc25033ac20
 Saving artifacts...
 ```
+As it can be seen from the outputs, the contract ```ExToken```'s address is ```0xAbD2fDF1E587990C27f0772ed2868ac3831d3d66```. Your contract's address should be different from this, and you will need the address in order to interact with your contract.
 
 Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explorer). If you deployed an ERC20 token, the explorer will be able to provide you the basic information of your token, such as the token name, symbol, total supply, etc.
 
@@ -177,6 +178,12 @@ In fact, the compiling of contract ```ExToken``` has already produced its ABI in
 ```
 $ echo $(cat ExToken.json | jq ".abi") > ExToken.abi
 ```
+This is how the ABI file looks like:
+```
+[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]
+```
+
+
 Alternatively, you can use the compiler ```solc``` to get the ABI. Suppose you are in the directory ```ExampleToken/```:
 
 - for ```ExTokenSimple.sol```
@@ -190,23 +197,69 @@ $ solc -o build/contract/ --abi contracts/ExTokenSimple.sol
 $ solc -o build/contract/ --allow-paths . --abi contracts/ExTokenStandard.sol
 ```
 
-
-## 
-
+For ```ExTokenStandard.sol```, all contracts used (directly or indirectly) by ```ExToken``` have also been compiled with separate ABI files generated.
 
 
-Check that after deploying, your account has been given the total supply of your token:
+## Creates a contract instance for ```ExToken```
 
+In the ```geth``` console, do the following:
 
+```
+> abi = [YOUR_CONTRACT_ABI];
+> ExToken = eth.contract(abi);
+> instance = ExToken.at("0xAbD2fDF1E587990C27f0772ed2868ac3831d3d66")
+```
+Remember to use the address of your deployed contract in the last commandline.
 
+## Get information from you contract
 
+Try the following:
 
+```
+> instance.name()
+"Example Token"
+> instance.symbol()
+"ExT"
+> instance.decimals()
+2
+> instance.balanceOf("0xd0d1baa48924550cd7c90fe8f959bbfade473fa4")
+2100000000
+```
+As the creator of the contract, you have been given the total supply of ```ExToken```.
 
+## Send transactions
 
+To send transactions to your contract, we need to specify the transaction sender. If not specified, your ```geth``` client will use a default account, which is initially undefined, and this will lead to execution failure. To define the default account, just give it a value:
 
+```
+> eth.defaultAccount = "0xd0d1baa48924550cd7c90fe8f959bbfade473fa4";
+```
 
+Now we transfer some tokens to another address. First, obtain a new address:
+```
+> to_addr = personal.newAccount();
+Passphrase: 
+Repeat passphrase: 
+"0x2f75e265606d26f966eb7dd050f91f592a861ad0"
+```
+Transfer the token:
 
+```
+> instance.transfer(to_addr, 10000);
+"0x76ca9196dfa495fde9923eb95a989ded6f3a102e5c1c6f842c3273b59763d035"
+```
+What returned is the transaction hash. You can check transaction details on the Rinkeby [explorer](https://www.rinkeby.io/#explorer).
 
+Now check the token balance of your accounts:
+
+```
+> instance.balanceOf(eth.defaultAccount)
+2099990000
+> instance.balanceOf(to_addr)
+10000
+```
+
+Try send some token to your friends :)
 
 
 
