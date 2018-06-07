@@ -128,7 +128,7 @@ Now you need to close the synchronizing ```geth``` client (```CTRL + C```) and r
 geth --rinkeby --light --rpc --rpcapi db,eth,net,web3,personal --unlock="0xd0d1baa48924550cd7c90fe8f959bbfade473fa4"
 ```
 
-You will be asked to provide the password for your account.
+You will be asked to provide the password for your account. Remember to replace my account.
 
 As the client starts synchronizing again, in your console (another opened terminal), check that your account has indeed got enough balance.
 
