@@ -58,6 +58,8 @@ As we are going to deploy our token contract to the Rinkeby testnet, we need an 
 
 If you don't already have a Rinkeby account with enough balance, say 0.5 ether, we recommend you to follow [this](https://gist.github.com/cryptogoth/10a98e8078cfd69f7ca892ddbdcf26bc) tutorial, only you don't need to run a full node. Synchronizing a light node is much faster, and we do need to get synchronized if our account is newly generated (so that the account will be known to have enough balance to deploy our contracts). 
 
+
+
 Here, I will assume you have already installed correctly the ```geth``` client and show most part of the rest.
 
 We first start the client in ```--light``` mode:
@@ -161,6 +163,8 @@ Saving artifacts...
 Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explorer). If you deployed an ERC20 token, the explorer will be able to provide you the basic information of your token, such as the token name, symbol, total supply, etc.
 
 # Interact with your contract
+
+For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node.
 
 Check that after deploying, you account has been given the total supply of your token:
 
