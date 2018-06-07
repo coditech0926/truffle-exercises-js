@@ -166,7 +166,7 @@ Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explore
 
 For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node.
 
-Check that after deploying, you account has been given the total supply of your token:
+Check that after deploying, your account has been given the total supply of your token:
 
 
 
