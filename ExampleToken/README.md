@@ -165,11 +165,10 @@ Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explore
 
 # Interact with your contract
 
-For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node. Learn more about contract ABI [here](https://solidity.readthedocs.io/en/develop/abi-spec.html).
-
+For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node. 
 ## Get the contract's ABI
 
-A contract's ABI, or Application Binary Interface, tells how applications will interact with the contract deployed on a blockchain. 
+A contract's ABI, or Application Binary Interface, tells how applications will interact with the contract deployed on a blockchain. Learn more about contract ABI [here](https://solidity.readthedocs.io/en/develop/abi-spec.html).
 
 In fact, the compiling of contract ```ExToken``` has already produced its ABI in the JSON file ```ExampleToken/build/contracts/ExToken.json```. To extract it from the file, we may use the ```jq``` tool, which you can find at this [link](https://stedolan.github.io/jq/download/). 
 
