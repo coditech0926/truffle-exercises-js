@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-// import using absolute path is also working for 'truffle compile', but it will be very tricky to compile using 'solc'  
+// import using absolute path is working for 'truffle compile', but it will be very tricky to compile using 'solc'  
 import '../node_modules/openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
 // import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol'; 
 
