@@ -259,7 +259,7 @@ Now check the token balance of your accounts:
 10000
 ```
 
-Try send some token to your friends :)
+Finally, try and send some token to your friends :)
 
 
 
