@@ -208,7 +208,10 @@ In the ```geth``` console, do the following:
 > ExToken = eth.contract(abi);
 > instance = ExToken.at("0xAbD2fDF1E587990C27f0772ed2868ac3831d3d66")
 ```
-Remember to use the address of your deployed contract in the last commandline.
+
+Replace ```[YOUR_CONTRACT_ABI]``` with the content of the ```ExToken.abi``` file.
+
+Replace my contract address with your deployed contract address in the last commandline.
 
 ### Get information from you contract
 
