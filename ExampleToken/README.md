@@ -165,7 +165,7 @@ Go check your contract on the Rinkeby [explorer](https://www.rinkeby.io/#explore
 
 # Interact with your contract
 
-For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node.
+For this section, you might want to run a full node as it provides all data needed locally. Nonetheless, we can still go on with a light node, only your node has to be connected to a full node. Learn more about contract ABI [here](https://solidity.readthedocs.io/en/develop/abi-spec.html).
 
 ## Get the contract's ABI
 
